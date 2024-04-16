@@ -11,6 +11,7 @@ export default function App() {
 function Counter() {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
+
   const [someDate, setSomeDate] = useState(new Date());
 
   function stepPlus() {
@@ -38,6 +39,13 @@ function Counter() {
     newDate.setDate(newDate.getDate() + daysToAdd);
     setSomeDate(newDate);
   };
+  function updateToday() {
+    if (count === 0) {
+      return "Today";
+    } else {
+      return count + " days from today";
+    }
+  }
 
   return (
     <div id="counter">
@@ -50,7 +58,9 @@ function Counter() {
         <span onClick={countPlus}>+</span>
       </p>
       <div id="date">
-        <p>Today is {someDate.toDateString()}</p>
+        <p>
+          {updateToday()} is {someDate.toDateString()}
+        </p>
       </div>
     </div>
   );
