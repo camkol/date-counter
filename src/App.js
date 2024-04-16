@@ -4,6 +4,7 @@ export default function App() {
   return (
     <div>
       <Counter />
+      <CounterTwo />
     </div>
   );
 }
@@ -26,11 +27,9 @@ function Counter() {
     updateDate(newCount);
   }
   function countMinus() {
-    if (count > 0) {
-      const newCount = count - step;
-      setCount(newCount);
-      updateDate(newCount);
-    }
+    const newCount = count - step;
+    setCount(newCount);
+    updateDate(newCount);
   }
 
   const updateDate = (newCount) => {
@@ -40,11 +39,11 @@ function Counter() {
     setSomeDate(newDate);
   };
   function updateToday() {
-    if (count === 0) {
-      return "Today";
-    } else {
-      return count + " days from today";
-    }
+    return count === 0
+      ? "Today is"
+      : count < 0
+      ? count * -1 + " days ago was"
+      : count + " days from today is";
   }
 
   return (
@@ -62,6 +61,41 @@ function Counter() {
           {updateToday()} is {someDate.toDateString()}
         </p>
       </div>
+    </div>
+  );
+}
+
+function CounterTwo() {
+  const [count, setCount] = useState(0);
+  const [step, setStep] = useState(1);
+
+  const date = new Date("june 21 2027");
+  date.setDate(date.getDate() + count);
+
+  return (
+    <div>
+      <div>
+        <button onClick={() => setStep((c) => c - 1)}>-</button>
+        <span>Step: {step}</span>
+        <button onClick={() => setStep((c) => c + 1)}>+</button>
+      </div>
+
+      <div>
+        <button onClick={() => setCount((c) => c - step)}>-</button>
+        <span>Count: {count}</span>
+        <button onClick={() => setCount((c) => c + step)}>+</button>
+      </div>
+
+      <p>
+        <span>
+          {count === 0
+            ? "Today is "
+            : count > 0
+            ? `${count} days from today is `
+            : `${Math.abs(count)} days ago was `}
+        </span>
+        <span>{date.toDateString()}</span>
+      </p>
     </div>
   );
 }
