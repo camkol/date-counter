@@ -34,6 +34,21 @@ Users should be able to:
 
 ## My process
 
+# Version 1:
+
+- This component manages a date counter with step and count states using useState.
+- It allows incrementing or decrementing the step value and updating the count accordingly.
+- The updateDate function calculates a new date based on the count changes, adjusting the displayed date accordingly.
+- The component renders buttons to adjust the step and count values and displays the calculated date based on the count.
+
+# Version 2:
+
+- This component implements another type of date counter with a slider input (range) and count state.
+- It uses useState to manage the count and range values.
+- The handleInput function updates the range state based on user input from the slider.
+- It calculates a new date based on the count and displays it dynamically, allowing the user to adjust the count with input fields and buttons.
+- The component includes a reset button to reset the count and range back to their initial values.
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -44,7 +59,7 @@ Users should be able to:
 
 ### What I learned
 
-This was a test of my knowledge based on useState hook.
+This was a class project to learn about useState. I finally truly understand it now.
 
 ### Continued development
 
