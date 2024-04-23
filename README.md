@@ -42,8 +42,6 @@ Users should be able to:
 - JavaScript - Scripting language
 - [React](https://reactjs.org/) - JS library
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 This was a test of my knowledge based on useState hook.
