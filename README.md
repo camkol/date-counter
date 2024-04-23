@@ -34,14 +34,14 @@ Users should be able to:
 
 ## My process
 
-# Version 1:
+### Version 1:
 
 - This component manages a date counter with step and count states using useState.
 - It allows incrementing or decrementing the step value and updating the count accordingly.
 - The updateDate function calculates a new date based on the count changes, adjusting the displayed date accordingly.
 - The component renders buttons to adjust the step and count values and displays the calculated date based on the count.
 
-# Version 2:
+### Version 2:
 
 - This component implements another type of date counter with a slider input (range) and count state.
 - It uses useState to manage the count and range values.
