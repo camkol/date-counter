@@ -22,6 +22,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Push buttons to increase or decrease value
 - Value should dictate days from current date
+- Version 2, should be able to use a range input and type-in input
 
 ### Screenshot
 
